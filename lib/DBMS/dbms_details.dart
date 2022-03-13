@@ -8,15 +8,15 @@ import 'data.dart';
 import 'loadingScreen.dart';
 
 class DBMS_Details extends StatefulWidget {
-  final String subTopicName,prev,next;
-  const DBMS_Details({Key? key,required this.subTopicName,required this.prev,required this.next}) : super(key: key);
+  final String subTopicName;
+  const DBMS_Details({Key? key,required this.subTopicName}) : super(key: key);
   @override
-  _DBMS_DetailsState createState() => _DBMS_DetailsState(subTopicName,prev,next);
+  _DBMS_DetailsState createState() => _DBMS_DetailsState(subTopicName);
 }
 
 class _DBMS_DetailsState extends State<DBMS_Details> {
-  var subTopicName,prev,next;
-  _DBMS_DetailsState(this.subTopicName,this.prev,this.next);
+  var subTopicName;
+  _DBMS_DetailsState(this.subTopicName);
   final firestoreInstance = FirebaseFirestore.instance;
   final firebaseUser=FirebaseAuth.instance.currentUser;
   bool checkFav=false;bool loading=true;
@@ -68,7 +68,7 @@ _checkInternetConnectivity();
                     onPressed: (){
                       int i=Data().topics.indexOf(subTopicName);
                       Navigator.of(context).push(MaterialPageRoute(builder: (context)=>
-                          DBMS_Details(subTopicName: subTopicName,prev: Data().topics[i-1],next: Data().topics[i+1],)));
+                          DBMS_Details(subTopicName: subTopicName)));
                     },
                   ),
                 ),

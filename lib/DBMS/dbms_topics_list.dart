@@ -64,7 +64,7 @@ Widget topicList(String topicName){
   return GestureDetector(
       onTap: (){
         int i=Data().topics.indexOf(topicName);
-        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DBMS_Details(subTopicName: topicName,prev: Data().topics[i-1],next: Data().topics[i+1],)));},
+        Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DBMS_Details(subTopicName: topicName,)));},
       child:Container(
         margin: EdgeInsets.all(4),
         decoration: BoxDecoration(
@@ -74,7 +74,7 @@ Widget topicList(String topicName){
         child: ListTile(title: Text(topicName),leading: Image.asset('assets/database.png',height: 30,),
             trailing: IconButton(icon:Icon(Icons.arrow_forward,color: Colors.blue,), onPressed: (){
               int i=Data().topics.indexOf(topicName);
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DBMS_Details(subTopicName: topicName,prev: Data().topics[i-1],next: Data().topics[i+1],)));})),
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>DBMS_Details(subTopicName: topicName)));})),
       ));
 }
 Widget subTopicList(List sub,String top){
