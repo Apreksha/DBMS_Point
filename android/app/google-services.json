@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "668582408338",
+    "project_id": "dbms-point",
+    "storage_bucket": "dbms-point.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668582408338:android:55f1cec4eabe23e132f64b",
+        "android_client_info": {
+          "package_name": "com.apreksha.dbms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668582408338-e1tl01an7bqmdj12p4uutr5v5q5php5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDLE5XvXFbXkoFTjAtqaO7mcG0LtaQ_lI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "668582408338-e1tl01an7bqmdj12p4uutr5v5q5php5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
